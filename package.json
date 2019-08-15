@@ -1,0 +1,9 @@
+{
+  "name": "PicupServer2",
+  "version": "1.0.0",
+  "description": "Picup Server Version_2 By Prisma",
+  "main": "index.js",
+  "repository": "https://github.com/rosf73/PicupServer2.git",
+  "author": "rosf73 <47631768+rosf73@users.noreply.github.com>",
+  "license": "MIT"
+}
