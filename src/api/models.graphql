@@ -1,0 +1,58 @@
+type User {
+  id: ID!
+  nickName: String!
+  email: String!
+  password: String!
+  profileLink: String!
+  admin: Boolean!
+  followers: [User!]!
+  following: [User!]!
+  posts: [Post!]!
+  likes: [Like!]!
+  comments: [Comment!]!
+  interests: [Interest!]!
+  loginSecret: String
+}
+
+type Post {
+  id: ID!
+  title: String!
+  content: String!
+  markerLink: String!
+  imageLink: String!
+  latitude: String!
+  longitude: String!
+  numOfViews: Int!
+  user: User
+  contents: [Content!]!
+  comments: [Comment!]!
+  likes: [Like!]!
+  date: String
+}
+
+type Content {
+  id: ID!
+  post: Post
+  link: String!
+  type: Boolean!
+}
+
+type Comment {
+  id: ID!
+  user: User
+  post: Post
+  text: String!
+  date: String
+}
+
+type Like {
+  id: ID!
+  user: User
+  post: Post
+}
+
+type Interest {
+  id: ID!
+  user: User
+  interesting: String!
+}

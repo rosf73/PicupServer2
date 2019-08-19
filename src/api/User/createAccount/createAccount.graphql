@@ -1,0 +1,12 @@
+type Query {
+  something: String!
+}
+
+type Mutation {
+  createAccount(
+    nickName: String!
+    email: String!
+    password: String!
+    profileLink: String!
+  ): Boolean!
+}
