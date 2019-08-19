@@ -1,0 +1,1 @@
+prisma scala type : https://github.com/prisma/prisma/issues/1753
