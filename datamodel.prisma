@@ -1,0 +1,58 @@
+type User {
+  id: ID! @id
+  nickName: String! @unique
+  email: String! @unique
+  password: String!
+  profileLink: String!
+  admin: Boolean! @default(value: false)
+  followers: [User!]! @relation(name: "FollowRelation")
+  following: [User!]! @relation(name: "FollowRelation")
+  posts: [Post!]! @relation(name: "PostOfUser", onDelete: CASCADE)
+  likes: [Like!]! @relation(name: "LikeOfUser", onDelete: CASCADE)
+  comments: [Comment!]! @relation(name: "CommentOfUser", onDelete: CASCADE)
+  interests: [Interest!]! @relation(name: "InterestOfUser")
+  loginSecret: String
+}
+
+type Post {
+  id: ID! @id
+  title: String!
+  content: String!
+  markerLink: String!
+  imageLink: String!
+  latitude: String!
+  longitude: String!
+  numOfViews: Int! @default(value: 0)
+  user: User @relation(name: "PostOfUser")
+  contents: [Content!]! @relation(name: "ContentOfPost", onDelete: CASCADE)
+  comments: [Comment!]! @relation(name: "CommentOfPost", onDelete: CASCADE)
+  likes: [Like!]! @relation(name: "LikeOfPost")
+  date: DateTime @createdAt
+}
+
+type Content {
+  id: ID! @id
+  post: Post @relation(name: "ContentOfPost")
+  link: String!
+  type: Boolean!
+}
+
+type Comment {
+  id: ID! @id
+  user: User @relation(name: "CommentOfUser")
+  post: Post @relation(name: "CommentOfPost")
+  text: String!
+  date: DateTime @createdAt
+}
+
+type Like {
+  id: ID! @id
+  user: User @relation(name: "LikeOfUser")
+  post: Post @relation(name: "LikeOfPost")
+}
+
+type Interest {
+  id: ID! @id
+  user: User @relation(name: "InterestOfUser")
+  interesting: String!
+}
