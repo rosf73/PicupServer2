@@ -1,6 +1,6 @@
 export const isAuthenticated = request => {
   if(!request.user) {
-    throw Error("You need to log in to perform this action");
+    throw Error("로그인 후 이용가능한 서비스입니다");
   }
   return;
 }

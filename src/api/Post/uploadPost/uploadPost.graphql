@@ -1,0 +1,11 @@
+type Mutation {
+  upload(
+    title: String!
+    content: String!
+    markerLink: String!
+    imageLink: String!
+    latitude: String!
+    longitude: String!
+    files: [Json!]!
+  ): Post!
+}
