@@ -22,6 +22,8 @@ type Post {
   imageLink: String!
   latitude: String!
   longitude: String!
+  tags: String!
+  hiddenTags: String!
   numOfViews: Int! @default(value: 0)
   user: User @relation(name: "PostOfUser")
   contents: [Content!]! @relation(name: "ContentOfPost", onDelete: CASCADE)

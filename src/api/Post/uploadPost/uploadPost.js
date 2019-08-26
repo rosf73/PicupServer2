@@ -4,7 +4,7 @@ export default {
   Mutation: {
     upload: async (_, args, { request, isAuthenticated }) => {
       isAuthenticated(request);
-      const { title, content, markerLink, imageLink, latitude, longitude, files } = args;
+      const { title, content, markerLink, imageLink, latitude, longitude, tags, hiddenTags, files } = args;
       const { user } = request;
 
       const post = await prisma.createPost({
@@ -14,6 +14,8 @@ export default {
         imageLink,
         latitude,
         longitude,
+        tags,
+        hiddenTags,
         user: {
           connect: { id: user.id }
         }

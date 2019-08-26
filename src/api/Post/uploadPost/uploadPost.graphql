@@ -6,6 +6,8 @@ type Mutation {
     imageLink: String!
     latitude: String!
     longitude: String!
+    tags: String!
+    hiddenTags: String!
     files: [Json!]!
   ): Post!
 }
