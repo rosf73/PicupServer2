@@ -1,0 +1,6 @@
+type Mutation {
+  editUser(
+    nickName: String
+    profileLink: String
+  ): User!
+}
