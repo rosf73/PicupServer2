@@ -1,0 +1,20 @@
+[v] Create account
+[ ] Log in
+[ ] Upload post
+[ ] See my profile
+[ ] See user profile
+[ ] Edit my profile
+[ ] Like & Follow
+[ ] Search user
+[ ] Search post
+[ ] See hot posts
+[ ] See recommend posts
+[ ] See following's posts
+[ ] See news feed
+[ ] See detail post
+[ ] See comment
+[ ] Add comment
+[ ] Delete post
+[ ] Delete comment
+[ ] Delete user
+[ ] Log out

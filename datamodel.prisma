@@ -5,6 +5,8 @@ type User {
   password: String!
   profileLink: String!
   admin: Boolean! @default(value: false)
+  isFollowing: Boolean! @default(value: false)
+  isMe: Boolean! @default(value: false)
   followers: [User!]! @relation(name: "FollowRelation")
   following: [User!]! @relation(name: "FollowRelation")
   posts: [Post!]! @relation(name: "PostOfUser", onDelete: CASCADE)
@@ -25,6 +27,7 @@ type Post {
   tags: String!
   hiddenTags: String!
   numOfViews: Int! @default(value: 0)
+  isLiked: Boolean! @default(value: false)
   user: User @relation(name: "PostOfUser")
   contents: [Content!]! @relation(name: "ContentOfPost", onDelete: CASCADE)
   comments: [Comment!]! @relation(name: "CommentOfPost", onDelete: CASCADE)

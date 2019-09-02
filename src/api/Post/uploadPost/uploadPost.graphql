@@ -8,6 +8,6 @@ type Mutation {
     longitude: String!
     tags: String!
     hiddenTags: String!
-    files: [Json!]!
+    files: [String!]!
   ): Post!
 }

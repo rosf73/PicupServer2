@@ -5,6 +5,8 @@ type User {
   password: String!
   profileLink: String!
   admin: Boolean!
+  isFollowing: Boolean!
+  isMe: Boolean!
   followers: [User!]!
   following: [User!]!
   posts: [Post!]!
@@ -22,7 +24,10 @@ type Post {
   imageLink: String!
   latitude: String!
   longitude: String!
+  tags: String!
+  hiddenTags: String!
   numOfViews: Int!
+  isLiked: Boolean!
   user: User
   contents: [Content!]!
   comments: [Comment!]!

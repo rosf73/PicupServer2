@@ -21,7 +21,7 @@ export default {
         }
       });
       files.forEach(async file => await prisma.createContent({
-        link: file.link,
+        link: file,
         type: file.type,
         post: {
           connect: { id: post.id }
