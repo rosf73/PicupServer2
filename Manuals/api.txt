@@ -1,7 +1,7 @@
 [v] Create account
-[ ] Log in
+[v] Log in
 [ ] Upload post
-[ ] See my profile
+[v] See my profile
 [ ] See user profile
 [ ] Edit my profile
 [ ] Like & Follow
