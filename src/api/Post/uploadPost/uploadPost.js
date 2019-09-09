@@ -2,7 +2,7 @@ import { prisma } from "../../../../generated/prisma-client";
 
 export default {
   Mutation: {
-    upload: async (_, args, { request, isAuthenticated }) => {
+    uploadPost: async (_, args, { request, isAuthenticated }) => {
       isAuthenticated(request);
       const { title, content, markerLink, imageLink, latitude, longitude, tags, hiddenTags, files } = args;
       const { user } = request;

@@ -1,5 +1,5 @@
 type Mutation {
-  upload(
+  uploadPost(
     title: String!
     content: String!
     markerLink: String!
